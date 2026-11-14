@@ -1,5 +1,5 @@
-// ========================================================
-// HealthOps PK — order capture (Supabase) + WhatsApp routing
+﻿// ========================================================
+// Sehatra — Order capture (Supabase) + WhatsApp routing
 // ========================================================
 
 const OFFICIAL_WHATSAPP_NUMBER = "923042917388";
@@ -9,9 +9,9 @@ const SUPABASE_URL = "https://iheerbgatusywlqoejeg.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImloZWVyYmdhdHVzeXdscW9lamVnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM1Mjk0NjcsImV4cCI6MjEwOTEwNTQ2N30.hGz1ffyZyD00W8MfvaZYK4NBXmBRSi-07LP1olxMBeg";
 
 const ORDERS_ENDPOINT = SUPABASE_URL + "/rest/v1/orders";
-const QUEUE_KEY = "healthops_pending_orders";
+const QUEUE_KEY = "sehatra_pending_orders";
 
-// 1. Product → price lookup (PKR)
+// 1. Product -> price lookup (PKR)
 function priceForProduct(productText) {
     const match = /Rs\.?\s*([\d,]+)/.exec(productText || "");
     return match ? parseInt(match[1].replace(/,/g, ""), 10) : null;
@@ -48,20 +48,20 @@ function copyText(elementId) {
     });
 }
 
-// 4. Pre-filled WhatsApp message
+// 4. Pre-filled WhatsApp message (English)
 function buildOrderMessage(order) {
-    let waText = "*Salam HealthOps Pakistan! Naya Order Submission:*\n\n";
-    waText += "Doctor / Owner: " + order.name + "\n";
+    let waText = "*Hello Sehatra! New Inspection Toolkit Order:*\n\n";
+    waText += "Doctor / Lead: " + order.name + "\n";
     waText += "Clinic / Hospital: " + order.clinic + "\n";
     waText += "City: " + order.city + "\n";
     waText += "WhatsApp: " + order.whatsapp + "\n";
     waText += "Selected Package: " + order.product + "\n";
-    waText += "Preferred Payment: " + order.payment_method + "\n";
+    waText += "Payment Method: " + order.payment_method + "\n";
     if (order.notes) {
         waText += "Notes: " + order.notes + "\n";
     }
     waText += "\nOrder ID: " + order._orderId;
-    waText += "\n\nKindly payment details share karein taake 1 ghante me files deliver ho sakein.";
+    waText += "\n\nPlease share payment confirmation so our team can dispatch your toolkit within 1 hour.";
     return waText;
 }
 
@@ -72,7 +72,7 @@ function makeOrderId() {
         String(now.getMonth() + 1).padStart(2, "0") +
         String(now.getDate()).padStart(2, "0");
     const rand = Math.random().toString(36).slice(2, 6).toUpperCase();
-    return "HP-" + stamp + "-" + rand;
+    return "SEHATRA-" + stamp + "-" + rand;
 }
 
 // 6. Raw insert. Resolves true only when Supabase accepted the row.

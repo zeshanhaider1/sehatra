@@ -1,5 +1,5 @@
-/* ========================================================
-   HealthOps PK — Premium Healthcare SaaS & Product Styling
+﻿/* ========================================================
+   HealthOps PK â€” Premium Healthcare SaaS & Product Styling
    ======================================================== */
 
 :root {
@@ -1422,4 +1422,46 @@ input:focus, select:focus, textarea:focus {
         justify-content: center;
         text-align: center;
     }
+}
+
+.footer-brand .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.footer-brand .brand-logo-wrap {
+    background: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* SEHATRA BRAND LOGO */
+.brand-logo-wrap {
+    width: 48px;
+    height: 48px;
+    background: #ffffff;
+    border: 1px solid rgba(2, 132, 199, 0.22);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 8px rgba(2, 132, 199, 0.14);
+    padding: 3px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.brand:hover .brand-logo-wrap {
+    transform: scale(1.06);
+    box-shadow: 0 6px 16px rgba(2, 132, 199, 0.24);
+}
+
+.brand-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
