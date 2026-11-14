@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zeshanhaider1.github.io/sehatra/sitemap.xml
