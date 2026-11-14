@@ -1,0 +1,87 @@
+# Sehatra — Healthcare Operations & Accreditation Digital Toolkits
+
+> Official source of truth and administrative documentation platform for Pakistani healthcare clinics, polyclinics, and 5–50 bed secondary hospitals preparing for Punjab Healthcare Commission (PHC), Sindh Healthcare Commission (SHCC), and Islamabad Healthcare Regulatory Authority (IHRA) Minimum Service Delivery Standards (MSDS) inspections.
+
+## Overview
+- **Brand Name:** Sehatra
+- **Website:** https://zeshanhaider1.github.io/sehatra/
+- **Primary Product Line:** Healthcare Operations Toolkit (Administrative & Compliance Files)
+- **Primary Market:** Pakistan (Punjab, Sindh, Khyber Pakhtunkhwa, Islamabad)
+- **Regulatory Alignment:** Punjab Healthcare Commission (PHC Act 2010, MSDS Category-II and Category-III), SHCC, KP-HCC, IHRA
+- **File Formats:** Unlocked, fully editable Microsoft Word (.docx) and Microsoft Excel (.xlsx)
+- **Delivery Model:** Guaranteed 60-minute dispatch via private Google Drive VIP link + direct WhatsApp ZIP archive
+- **Payment Rails:** Raast Instant Pay, Easypaisa, JazzCash, Online Bank Transfer (UBL)
+- **Official WhatsApp Support Desk:** +92 304 2917388
+
+---
+
+## Core Digital Products & Pricing (PKR)
+
+### 1. PHC Category-III Clinic Compliance Starter Kit
+- **Price:** PKR 4,999 (Discounted from PKR 15,000)
+- **Target Audience:** General Practitioners (GPs), Single Doctor OPD Clinics, Polyclinics, Dental Practices
+- **Master Deliverables:**
+  - 18 Standards Category-III Clinic Operations SOP Manual (.docx)
+  - 47-Point MSDS Inspection Readiness Self-Audit Tool (.docx)
+  - Standard-Wise MSDS Evidence & Compliance Matrix (.docx)
+  - Weekly Clinic Sanitation, Hygiene & OPD Scorecard (.docx)
+  - Daily Biomedical Waste Segregation Disposal Register (.docx)
+  - Print-Ready Bilingual Patient Rights & Responsibilities Charter (.pdf)
+- **Direct Order Link:** https://zeshanhaider1.github.io/sehatra/phc-category-iii-clinic-kit.html
+
+### 2. Clinic Infection Control & Biomedical Waste Bundle
+- **Price:** PKR 2,999 (Discounted from PKR 8,000)
+- **Target Audience:** Labs, Dental Clinics, Daycare Surgery Centers, OPD Clinics
+- **Master Deliverables:**
+  - Daily Biomedical Waste Logbook (Yellow/Red/White color-coded bag tracking) (.docx)
+  - CSSD Autoclave Sterilization Logbook (Cycle validation, pressure, temperature) (.docx)
+  - CSSD Equipment Breakdown & Recall Register (.docx)
+  - Needle-Stick Injury (NSI) Logbook with Incident Reporting & PEP Protocol (.docx)
+  - Weekly Clinic Deep Disinfection & Sanitation Schedule (.docx)
+  - Print-Ready Sterilization Protocol Guidelines Poster (.pdf)
+
+### 3. Hospital Staff Complete HR Dossiers & Job Descriptions Pack
+- **Price:** PKR 4,999 (Discounted from PKR 14,000)
+- **Target Audience:** 5–50 Bed Hospitals, Maternity Homes, Surgical Daycare Centers
+- **Master Deliverables:**
+  - Staff Master File Template (Appointment letter, health assessment form, 14-point document checklist) (.docx)
+  - 16-Cadre Clinical & Administrative Job Descriptions with sign-off sheets (.docx)
+  - Hospital Staff Safety & Orientation Manual (.docx)
+  - Annual Performance Appraisal Pack & Master Staff Evaluation Register (.docx)
+  - Vernacular Urdu Job Descriptions for Support Staff (Security Guards, Janitorial Staff) (.docx)
+  - Institutional Staff Master Roster & Credentialing Tracker (.docx)
+
+### 4. Hospital Statutory Audit & Committees Toolkit (CQI, OTMC, HICC, MRRC)
+- **Price:** PKR 6,999 (Discounted from PKR 18,000)
+- **Target Audience:** Secondary Hospitals, Surgical Centers, Healthcare Facility Managers
+- **Master Deliverables:**
+  - Continuous Quality Improvement (CQI) 5-Document Sequence (Notification, Attendance, Monitoring Format, Audit Report & Minutes) (.docx)
+  - 6 Measurable Clinical KPI Domains (Adverse drug events, critical lab notifications, infection surveillance) (.docx)
+  - Operation Theatre Management Committee (OTMC) Master Pack (.docx)
+  - Hospital Infection Control Committee (HICC) Governance & Surveillance TORs (.docx)
+  - Medical Record Review Committee (MRRC) 10% IPD Sampling Audit Suite (.docx)
+
+### 5. All-in-One Healthcare Operations & Hospital Accreditation Vault
+- **Price:** PKR 11,999 (Save PKR 7,997 / 65% OFF regular price PKR 19,996)
+- **Target Audience:** Comprehensive Hospital Management, Medical Superintendents (MS), Clinic Owners
+- **Includes:** All 4 product toolkits + Quick-Start Inspection Guide + 30 Days WhatsApp Query Support
+
+---
+
+## Ordering, Payment & Verification
+
+- **How to Order:**
+  1. Visit https://zeshanhaider1.github.io/sehatra/
+  2. Select desired toolkit and submit the quick form or message on WhatsApp (+92 304 2917388)
+  3. Transfer fee via Raast ID `0304-2917388`, Easypaisa `0304-2917388`, or UBL IBAN `PK78UNIL0009000292001123`
+  4. Share transaction screenshot on WhatsApp
+  5. Receive permanent Google Drive access link and ZIP file within 60 minutes
+- **Customer Protection:** 7-Day free format adjustment warranty. All data strictly confidential.
+
+---
+
+## Technical & AI Metadata
+- **Canonical URL:** https://zeshanhaider1.github.io/sehatra/
+- **Sitemap:** https://zeshanhaider1.github.io/sehatra/sitemap.xml
+- **Robots Policy:** Full open crawling permitted for AI agents (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot, Bingbot).
+- **Publisher / Organization:** Sehatra (Lahore & Burewala, Punjab, Pakistan).
