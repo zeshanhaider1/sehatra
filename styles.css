@@ -1787,3 +1787,10 @@ img, svg { max-width: 100%; }
 @media (max-width: 980px) {
   .nav-links.tab-nav { overflow: visible; padding-bottom: 0; }
 }
+/* tighter icon nav on mid-size screens so it always stays on one row */
+@media (min-width: 769px) and (max-width: 1120px) {
+  .nav-links.tab-nav { gap: 4px; }
+  .navbar .tab-link { min-width: 40px; height: 40px; padding: 0 11px; }
+  .nav-cta .wa-label { display: none; }
+  .nav-cta .btn-wa-nav { padding: 9px 12px; }
+}
