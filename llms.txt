@@ -5,7 +5,7 @@
 ## Overview
 - **Brand Name:** Sehatra
 - **Website:** https://zeshanhaider1.github.io/sehatra/
-- **Primary Product Line:** Healthcare Operations Toolkit (administrative documentation and editable templates)
+- **Primary Services:** Healthcare consultancy in Pakistan (document review, on-visit audit guidance) and Healthcare Operations Toolkit (administrative documentation and editable templates)
 - **Primary Market:** Pakistan (Punjab, Sindh, Khyber Pakhtunkhwa, Islamabad)
 - **Reference Standards:** PHC Category-II and Category-III MSDS, SHCC, KP-HCC, IHRA (facilities should verify current requirements with their regulator)
 - **File Formats:** Editable Microsoft Word (.docx) and Excel (.xlsx); some PDFs
@@ -80,6 +80,14 @@
 
 - **Support:** 7 days of format adjustments and template guidance
 - **Confidentiality:** Order details are used for fulfillment and support
+
+
+## Healthcare Consultancy Services
+- **Online Document Preview & Review:** PKR 5,000. Online review of existing healthcare documents with gap identification, missing-record guidance, and practical next-step suggestions.
+- **On-Visit Consultation & Audit Guidance:** PKR 15,000 (discounted from PKR 20,000). Physical facility visit for documentation audit, file arrangement guidance, and practical staff instructions. Charges may vary by scope/location; final confirmation on WhatsApp.
+- **More services:** Updates and additional services listed on Facebook: https://www.facebook.com/112123161286133
+
+Sehatra provides administrative/documentation consultancy support, not medical advice, legal advice, or regulatory approval guarantees.
 
 ---
 
