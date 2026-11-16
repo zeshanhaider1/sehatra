@@ -1,87 +1,95 @@
-# Sehatra — Healthcare Operations & Accreditation Digital Toolkits
+# Sehatra - Healthcare Operations & Documentation Digital Toolkits
 
-> Official source of truth and administrative documentation platform for Pakistani healthcare clinics, polyclinics, and 5–50 bed secondary hospitals preparing for Punjab Healthcare Commission (PHC), Sindh Healthcare Commission (SHCC), and Islamabad Healthcare Regulatory Authority (IHRA) Minimum Service Delivery Standards (MSDS) inspections.
+> Sehatra is an independent provider of editable administrative documentation for clinics, polyclinics, hospitals, and labs in Pakistan. The toolkits are designed around commonly referenced Punjab Healthcare Commission (PHC) Minimum Service Delivery Standards (MSDS) and similar provincial requirements. Sehatra is not endorsed, authorized, or affiliated with PHC, SHCC, KP-HCC, IHRA, or any other regulator.
 
 ## Overview
 - **Brand Name:** Sehatra
 - **Website:** https://zeshanhaider1.github.io/sehatra/
-- **Primary Product Line:** Healthcare Operations Toolkit (Administrative & Compliance Files)
+- **Primary Product Line:** Healthcare Operations Toolkit (administrative documentation and editable templates)
 - **Primary Market:** Pakistan (Punjab, Sindh, Khyber Pakhtunkhwa, Islamabad)
-- **Regulatory Alignment:** Punjab Healthcare Commission (PHC Act 2010, MSDS Category-II and Category-III), SHCC, KP-HCC, IHRA
-- **File Formats:** Unlocked, fully editable Microsoft Word (.docx) and Microsoft Excel (.xlsx)
-- **Delivery Model:** Guaranteed 60-minute dispatch via private Google Drive VIP link + direct WhatsApp ZIP archive
-- **Payment Rails:** Raast Instant Pay, Easypaisa, JazzCash, Online Bank Transfer (UBL)
-- **Official WhatsApp Support Desk:** +92 304 2917388
+- **Reference Standards:** PHC Category-II and Category-III MSDS, SHCC, KP-HCC, IHRA (facilities should verify current requirements with their regulator)
+- **File Formats:** Editable Microsoft Word (.docx) and Excel (.xlsx); some PDFs
+- **Delivery:** Google Drive link + WhatsApp ZIP; delivery target is within 60 minutes after payment confirmation
+- **Payment Rails:** Raast, Easypaisa, JazzCash, online bank transfer (UBL)
+- **WhatsApp Support:** +92 304 2917388
 
 ---
 
-## Core Digital Products & Pricing (PKR)
+## Digital Products & Pricing (PKR)
 
 ### 1. PHC Category-III Clinic Compliance Starter Kit
-- **Price:** PKR 4,999 (Discounted from PKR 15,000)
-- **Target Audience:** General Practitioners (GPs), Single Doctor OPD Clinics, Polyclinics, Dental Practices
-- **Master Deliverables:**
-  - 18 Standards Category-III Clinic Operations SOP Manual (.docx)
-  - 47-Point MSDS Inspection Readiness Self-Audit Tool (.docx)
-  - Standard-Wise MSDS Evidence & Compliance Matrix (.docx)
-  - Weekly Clinic Sanitation, Hygiene & OPD Scorecard (.docx)
-  - Daily Biomedical Waste Segregation Disposal Register (.docx)
-  - Print-Ready Bilingual Patient Rights & Responsibilities Charter (.pdf)
-- **Direct Order Link:** https://zeshanhaider1.github.io/sehatra/phc-category-iii-clinic-kit.html
+- **Price:** PKR 4,999
+- **Target Audience:** General Practitioners (GPs), single-doctor OPD clinics, polyclinics, dental practices
+- **Key Deliverables:**
+  - Category-III clinic operations SOP manual covering 18 standards (.docx)
+  - 47-point MSDS self-audit checklist (.docx)
+  - Standards and evidence tracker (.docx)
+  - Weekly hygiene, sterilization, and OPD scorecard (.docx)
+  - Daily biomedical waste disposal register (.docx)
+  - Bilingual patient rights and responsibilities charter (.pdf)
+- **Product Page:** https://zeshanhaider1.github.io/sehatra/phc-category-iii-clinic-kit.html
 
 ### 2. Clinic Infection Control & Biomedical Waste Bundle
-- **Price:** PKR 2,999 (Discounted from PKR 8,000)
-- **Target Audience:** Labs, Dental Clinics, Daycare Surgery Centers, OPD Clinics
-- **Master Deliverables:**
-  - Daily Biomedical Waste Logbook (Yellow/Red/White color-coded bag tracking) (.docx)
-  - CSSD Autoclave Sterilization Logbook (Cycle validation, pressure, temperature) (.docx)
-  - CSSD Equipment Breakdown & Recall Register (.docx)
-  - Needle-Stick Injury (NSI) Logbook with Incident Reporting & PEP Protocol (.docx)
-  - Weekly Clinic Deep Disinfection & Sanitation Schedule (.docx)
-  - Print-Ready Sterilization Protocol Guidelines Poster (.pdf)
+- **Price:** PKR 2,999
+- **Target Audience:** Labs, dental clinics, daycare surgery centers, OPD clinics
+- **Key Deliverables:**
+  - Daily biomedical waste logbook with color-coded bag tracking (.docx)
+  - CSSD autoclave sterilization logbook (.docx)
+  - CSSD equipment breakdown and recall register (.docx)
+  - Needle-stick injury (NSI) logbook and incident record (.docx)
+  - Weekly disinfection and sanitation sheet (.docx)
+  - Sterilization protocol poster (.pdf)
+- **Product Page:** https://zeshanhaider1.github.io/sehatra/infection-control-biomedical-waste-bundle.html
 
 ### 3. Hospital Staff Complete HR Dossiers & Job Descriptions Pack
-- **Price:** PKR 4,999 (Discounted from PKR 14,000)
-- **Target Audience:** 5–50 Bed Hospitals, Maternity Homes, Surgical Daycare Centers
-- **Master Deliverables:**
-  - Staff Master File Template (Appointment letter, health assessment form, 14-point document checklist) (.docx)
-  - 16-Cadre Clinical & Administrative Job Descriptions with sign-off sheets (.docx)
-  - Hospital Staff Safety & Orientation Manual (.docx)
-  - Annual Performance Appraisal Pack & Master Staff Evaluation Register (.docx)
-  - Vernacular Urdu Job Descriptions for Support Staff (Security Guards, Janitorial Staff) (.docx)
-  - Institutional Staff Master Roster & Credentialing Tracker (.docx)
+- **Price:** PKR 4,999
+- **Target Audience:** 5-50 bed hospitals, maternity homes, surgical daycare centers
+- **Key Deliverables:**
+  - Staff master file template: appointment letter, health form, 14-point checklist (.docx)
+  - 16-cadre clinical and administrative job descriptions with sign-off sheets (.docx)
+  - Staff orientation manual: safety, patient privacy, code of conduct (.docx)
+  - Performance appraisal pack and master appraisal register (.docx)
+  - Urdu job descriptions for janitorial and security staff (.docx)
+  - Staff credentialing and verification tracker (.docx)
+- **Product Page:** https://zeshanhaider1.github.io/sehatra/hospital-hr-dossiers.html
 
-### 4. Hospital Statutory Audit & Committees Toolkit (CQI, OTMC, HICC, MRRC)
-- **Price:** PKR 6,999 (Discounted from PKR 18,000)
-- **Target Audience:** Secondary Hospitals, Surgical Centers, Healthcare Facility Managers
-- **Master Deliverables:**
-  - Continuous Quality Improvement (CQI) 5-Document Sequence (Notification, Attendance, Monitoring Format, Audit Report & Minutes) (.docx)
-  - 6 Measurable Clinical KPI Domains (Adverse drug events, critical lab notifications, infection surveillance) (.docx)
-  - Operation Theatre Management Committee (OTMC) Master Pack (.docx)
-  - Hospital Infection Control Committee (HICC) Governance & Surveillance TORs (.docx)
-  - Medical Record Review Committee (MRRC) 10% IPD Sampling Audit Suite (.docx)
+### 4. Hospital Statutory Audit & Committees Toolkit (CQI, OTMC, HICC)
+- **Price:** PKR 6,999
+- **Target Audience:** Secondary hospitals, surgical centers, healthcare facility managers
+- **Key Deliverables:**
+  - CQI 5-document sequence: notification, attendance, monitoring tool, report, minutes (.docx)
+  - 6 clinical KPI domains: adverse drug events, critical lab notifications, surgical audits (.docx)
+  - Operation Theatre Management Committee (OTMC) pack (.docx)
+  - Hospital Infection Control Committee (HICC) terms of reference and surveillance records (.docx)
+  - Medical record review suite: case sampling sheet and 10% IPD clinical audit (.docx)
+- **Product Page:** https://zeshanhaider1.github.io/sehatra/hospital-cqi-committees.html
 
 ### 5. All-in-One Healthcare Operations & Hospital Accreditation Vault
-- **Price:** PKR 11,999 (Save PKR 7,997 / 65% OFF regular price PKR 19,996)
-- **Target Audience:** Comprehensive Hospital Management, Medical Superintendents (MS), Clinic Owners
-- **Includes:** All 4 product toolkits + Quick-Start Inspection Guide + 30 Days WhatsApp Query Support
+- **Price:** PKR 11,999 (regular price PKR 19,996; saving PKR 7,997, approximately 40%)
+- **Target Audience:** Hospital management, medical superintendents, clinic owners
+- **Includes:** All 4 toolkits above, plus a quick-start organization guide and 30 days of WhatsApp query support
 
 ---
 
-## Ordering, Payment & Verification
+## Ordering and Delivery
+1. Visit https://zeshanhaider1.github.io/sehatra/
+2. Select a toolkit and submit the order form or message on WhatsApp (+92 304 2917388)
+3. Pay via Raast ID `0304-2917388`, Easypaisa `0304-2917388`, or UBL IBAN `PK78UNIL0009000292001123`
+4. Share the transaction screenshot on WhatsApp
+5. Receive the Google Drive access link and ZIP file; delivery target is within 60 minutes after payment confirmation
 
-- **How to Order:**
-  1. Visit https://zeshanhaider1.github.io/sehatra/
-  2. Select desired toolkit and submit the quick form or message on WhatsApp (+92 304 2917388)
-  3. Transfer fee via Raast ID `0304-2917388`, Easypaisa `0304-2917388`, or UBL IBAN `PK78UNIL0009000292001123`
-  4. Share transaction screenshot on WhatsApp
-  5. Receive permanent Google Drive access link and ZIP file within 60 minutes
-- **Customer Protection:** 7-Day free format adjustment warranty. All data strictly confidential.
+- **Support:** 7 days of format adjustments and template guidance
+- **Confidentiality:** Order details are used for fulfillment and support
+
+---
+
+## Important Scope Note
+Sehatra provides administrative and operational documentation, not medical advice, legal advice, or regulatory approval. Inspection outcomes depend on each facility's implementation, records, staff practices, and the regulator's review. Facilities should check current requirements directly with their provincial healthcare commission.
 
 ---
 
 ## Technical & AI Metadata
 - **Canonical URL:** https://zeshanhaider1.github.io/sehatra/
 - **Sitemap:** https://zeshanhaider1.github.io/sehatra/sitemap.xml
-- **Robots Policy:** Full open crawling permitted for AI agents (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot, Bingbot).
-- **Publisher / Organization:** Sehatra (Lahore & Burewala, Punjab, Pakistan).
+- **Robots Policy:** Open crawling permitted for search engines and AI agents, including GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot, and Bingbot
+- **Publisher:** Sehatra (Punjab, Pakistan)
