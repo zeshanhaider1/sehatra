@@ -295,6 +295,7 @@ function closeModal() {
     document.querySelectorAll('.tab-link').forEach(function(l){
       var on = l.getAttribute('data-tab')===tab;
       l.classList.toggle('active', on);
+      l.setAttribute('aria-selected', on ? 'true' : 'false');
       if(on){ l.setAttribute('aria-current','page'); } else { l.removeAttribute('aria-current'); }
     });
     document.querySelectorAll('.mbn-item').forEach(function(b){

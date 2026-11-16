@@ -1740,3 +1740,50 @@ img, svg { max-width: 100%; }
   .dash-btn { padding: 14px; font-size: .94rem; }
   .welcome-highlights span { font-size: .8rem; }
 }
+/* ===== Icon-only nav tabs: one row, labels on hover ===== */
+.nav-links.tab-nav {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 6px;
+  overflow: visible;
+}
+.navbar .tab-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  min-width: 44px;
+  padding: 0 13px;
+  flex: 0 0 auto;
+  font-size: .92rem;
+  white-space: nowrap;
+}
+.navbar .tab-link i { font-size: 1rem; line-height: 1; }
+.navbar .tab-link .tab-label {
+  display: inline-block;
+  max-width: 0;
+  opacity: 0;
+  margin-left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 700;
+  transition: max-width .28s ease, opacity .18s ease, margin-left .28s ease;
+}
+.navbar .tab-link:hover .tab-label,
+.navbar .tab-link:focus-visible .tab-label {
+  max-width: 170px;
+  opacity: 1;
+  margin-left: 8px;
+}
+.navbar .tab-link:hover { transform: none; }
+.navbar .tab-link:focus-visible { outline: 2px solid #0786E3; outline-offset: 2px; }
+.navbar .tab-link.active { color: #fff; }
+
+/* touch screens have no hover: keep labels visible when there is room */
+@media (hover: none) and (min-width: 1140px) {
+  .navbar .tab-link .tab-label { max-width: 170px; opacity: 1; margin-left: 8px; }
+}
+@media (max-width: 980px) {
+  .nav-links.tab-nav { overflow: visible; padding-bottom: 0; }
+}
