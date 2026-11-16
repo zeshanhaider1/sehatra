@@ -1583,7 +1583,7 @@ a { color: var(--brand-blue-dark); }
 /* ===== Watermark + beauty polish ===== */
 .welcome-watermark { display:flex; align-items:center; justify-content:center; position:relative; }
 .watermark-frame { position:relative; width:100%; max-width:420px; aspect-ratio: 1/1; border-radius:28px; background: radial-gradient(circle at 30% 20%, #ffffff, #eaf4ff 65%, #dff0ff); border:1px solid #d7e7f7; overflow:hidden; box-shadow: 0 24px 48px rgba(7,134,227,.12); display:flex; flex-direction:column; align-items:center; justify-content:center; }
-.watermark-logo { width:75%; height:auto; opacity:.18; filter: grayscale(0.2); mix-blend-mode: multiply; transform: rotate(-6deg); user-select:none; pointer-events:none; }
+.watermark-logo { width:75%; height:auto; opacity:.26; filter: grayscale(0.2); mix-blend-mode: multiply; transform: rotate(-6deg); user-select:none; pointer-events:none; }
 .watermark-caption { position:absolute; bottom:22px; left:0; right:0; text-align:center; }
 .watermark-pill { display:inline-block; background:#fff; border:1px solid #cfe7ff; color:#0569b8; font-size:.72rem; font-weight:800; padding:4px 14px; border-radius:999px; letter-spacing:.12em; }
 .watermark-caption p { margin:8px 0 0; color:#334155; font-size:.82rem; font-weight:600; padding:0 20px; }
@@ -1637,7 +1637,7 @@ section.tab-panel > .products-section, section.tab-panel > .services-section, se
   .welcome-grid { grid-template-columns:1fr; gap:18px; }
   .welcome-watermark { order:-1; }
   .watermark-frame { max-width:100%; aspect-ratio:16/9; }
-  .watermark-logo { width:50%; opacity:.14; }
+  .watermark-logo { width:50%; opacity:.22; }
   .welcome-copy h1 { font-size: clamp(1.7rem, 6.5vw, 2.2rem); }
   .welcome-copy p { font-size:.98rem; }
   .dashboard-actions { grid-template-columns:1fr; gap:10px; margin:16px 0 10px; }
@@ -1937,7 +1937,7 @@ img, svg { max-width: 100%; }
   pointer-events: none;
 }
 
-.watermark-logo { animation: wmBreathe 8s ease-in-out infinite; }
+.watermark-logo { opacity: .26; animation: none; }
 
 .wm-spark {
   position: absolute;
@@ -1962,10 +1962,6 @@ img, svg { max-width: 100%; }
 @keyframes wmRimPulse {
   0%, 100% { border-color: #d7e7f7; box-shadow: 0 24px 48px rgba(7, 134, 227, .12); }
   50% { border-color: #bfe0ff; box-shadow: 0 30px 60px rgba(7, 134, 227, .2); }
-}
-@keyframes wmBreathe {
-  0%, 100% { opacity: .18; transform: rotate(-6deg) scale(1); }
-  50% { opacity: .25; transform: rotate(-6deg) scale(1.035); }
 }
 @keyframes wmSweep {
   0%, 52% { transform: translateX(-140%) rotate(8deg); }
@@ -2015,5 +2011,5 @@ img, svg { max-width: 100%; }
   .welcome-copy > *,
   .welcome-steps-head,
   .ws-card { animation: none !important; }
-  .watermark-logo { opacity: .18; }
+  .watermark-logo { opacity: .26; }
 }
