@@ -1701,7 +1701,8 @@ section.tab-panel > .products-section, section.tab-panel > .services-section, se
 
 
 /* ===== Mobile overflow + polish fixes ===== */
-html, body { max-width: 100%; overflow-x: hidden; }
+html { max-width: 100%; overflow-x: hidden; overflow-x: clip; }
+body { max-width: 100%; overflow-x: clip; }
 .footer-brand, .footer-contact { min-width: 0; }
 img, svg { max-width: 100%; }
 
