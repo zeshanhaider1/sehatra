@@ -2158,3 +2158,27 @@ img, svg { max-width: 100%; }
   .sw-more-head { text-align: left; }
   .sw-more-head p, .sw-more-note { text-align: left; }
 }
+/* ===== Footer social row ===== */
+.footer-social { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  border: 1px solid #1e3a5f;
+  background: rgba(255, 255, 255, .04);
+  color: #cbd5e1;
+  font-size: .82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+.footer-social a:hover, .footer-social a:focus-visible {
+  background: #0786E3;
+  border-color: #0786E3;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .footer-social a { min-height: 40px; }
+}
