@@ -1595,7 +1595,7 @@ a { color: var(--brand-blue-dark); }
 .stat strong { display:block; color:#0786E3; font-size:1.15rem; line-height:1.1; }
 .stat span { color:#64748b; font-size:.76rem; font-weight:600; }
 .welcome-copy h1 { letter-spacing:-.02em; }
-.welcome-copy h1 .brand-accent { background: linear-gradient(90deg,#0786E3,#E7251C); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.welcome-copy h1 .brand-accent { background: none; -webkit-background-clip: initial; background-clip: initial; color: var(--brand-blue); }
 .dash-btn { border-radius:14px; font-size:1rem; }
 .dash-btn:hover { border-color:#0786E3; }
 section.tab-panel > .products-section, section.tab-panel > .services-section, section.tab-panel > .steps-section, section.tab-panel > .order-section, section.tab-panel > .phc-resources-section, section.tab-panel > .faq-section { background: transparent; }
@@ -1885,4 +1885,17 @@ img, svg { max-width: 100%; }
 @media (max-width: 768px) {
   .footer-links { gap: 6px 12px; font-size: .82rem; padding: 14px 14px; }
   .footer-links .fl-title { width: 100%; }
+}
+/* cleaner single-colour accent in the welcome heading + local SEO line */
+.welcome-copy h1 .brand-accent { color: #0786E3; background: none; -webkit-background-clip: initial; background-clip: initial; }
+.welcome-areas {
+  margin: 18px 0 0;
+  padding-top: 14px;
+  border-top: 1px dashed #dbe7f4;
+  color: #64748b;
+  font-size: .88rem;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .welcome-areas { font-size: .82rem; text-align: left; }
 }
