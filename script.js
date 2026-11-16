@@ -277,8 +277,8 @@ function closeModal() {
 
 // Dashboard tab navigation (no infinite scroll)
 (function(){
-  var HASH_BY_TAB = {home:'', products:'products', services:'services', how:'how-it-works', order:'order-form-section', phc:'phc-resources', faq:'faq'};
-  var TAB_BY_HASH = {products:'products', services:'services', comparison:'products', 'how-it-works':'how', 'order-form-section':'order', payment:'order', 'phc-resources':'phc', faq:'faq', 'documentation-areas':'products', home:'home'};
+  var HASH_BY_TAB = {home:'', products:'products', software:'software', services:'services', how:'how-it-works', order:'order-form-section', phc:'phc-resources', faq:'faq'};
+  var TAB_BY_HASH = {products:'products', software:'software', services:'services', comparison:'products', 'how-it-works':'how', 'order-form-section':'order', payment:'order', 'phc-resources':'phc', faq:'faq', 'documentation-areas':'products', home:'home'};
 
   function activateTab(tab){
     if(!tab) tab = 'home';
