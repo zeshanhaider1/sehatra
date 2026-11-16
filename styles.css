@@ -1698,3 +1698,44 @@ section.tab-panel > .products-section, section.tab-panel > .services-section, se
   .top-bar { font-size:.76rem; }
   .delivery-badge { font-size:.72rem; }
 }
+
+
+/* ===== Mobile overflow + polish fixes ===== */
+html, body { max-width: 100%; overflow-x: hidden; }
+.footer-brand, .footer-contact { min-width: 0; }
+img, svg { max-width: 100%; }
+
+@media (max-width: 768px) {
+  /* footer was forcing a min-content column wider than the screen */
+  .footer-content { grid-template-columns: minmax(0, 1fr) !important; }
+  .footer-brand p { max-width: 100%; }
+  .footer-contact p { flex-wrap: wrap; gap: 6px; align-items: flex-start; }
+  .footer a { overflow-wrap: anywhere; }
+  .footer-bottom { text-align: center; }
+
+  /* horizontal-scroll hint for comparison table */
+  .comparison-scroll-hint { display: block; font-size: .78rem; color: #64748b; font-weight: 600; margin: 0 0 8px; }
+
+  /* bigger, easier tap targets */
+  .faq-question { min-height: 52px; }
+  .tab-panel .btn, .tab-panel a.btn { width: 100%; justify-content: center; }
+  .modal-card .btn { width: auto; }
+  .float-wa-btn { bottom: 92px; }
+
+  /* keep anchor targets clear of sticky navbar */
+  section[id], .tab-panel { scroll-margin-top: 70px; }
+
+  /* tighter, cleaner cards */
+  .product-card, .service-card { box-shadow: 0 10px 24px rgba(15,23,42,.06); }
+  .pricing-block { align-items: baseline; }
+  .welcome-kicker { font-size: .82rem; }
+  .watermark-caption { bottom: 14px; }
+  .watermark-caption p { font-size: .74rem; padding: 0 12px; }
+}
+
+@media (max-width: 420px) {
+  .container { padding: 0 14px; }
+  .dashboard-actions { gap: 8px; }
+  .dash-btn { padding: 14px; font-size: .94rem; }
+  .welcome-highlights span { font-size: .8rem; }
+}
