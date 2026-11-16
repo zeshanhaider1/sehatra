@@ -288,6 +288,7 @@ function closeModal() {
     links.forEach(function(l){
       if(l.classList.contains('tab-link')) l.classList.toggle('active', l.getAttribute('data-tab')===tab);
     });
+    document.querySelectorAll('.mbn-item').forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-tab')===tab); });
     try { window.scrollTo({top:0, behavior:'smooth'}); } catch(e){ window.scrollTo(0,0); }
     // re-trigger reveals in active panel
     document.querySelectorAll('.tab-panel.active .reveal').forEach(function(el){ el.classList.add('in-view'); });
