@@ -277,41 +277,62 @@ function closeModal() {
 
 // Dashboard tab navigation (no infinite scroll)
 (function(){
+  var HASH_BY_TAB = {home:'', products:'products', services:'services', how:'how-it-works', order:'order-form-section', phc:'phc-resources', faq:'faq'};
+  var TAB_BY_HASH = {products:'products', services:'services', comparison:'products', 'how-it-works':'how', 'order-form-section':'order', payment:'order', 'phc-resources':'phc', faq:'faq', 'documentation-areas':'products', home:'home'};
+
   function activateTab(tab){
-    if(!tab) return;
+    if(!tab) tab = 'home';
     var panels = document.querySelectorAll('.tab-panel');
-    var links = document.querySelectorAll('[data-tab]');
     var found = false;
     panels.forEach(function(p){ if(p.getAttribute('data-panel')===tab) found = true; });
     if(!found) tab = 'home';
-    panels.forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-panel')===tab); });
-    links.forEach(function(l){
-      if(l.classList.contains('tab-link')) l.classList.toggle('active', l.getAttribute('data-tab')===tab);
+
+    panels.forEach(function(p){
+      var on = p.getAttribute('data-panel')===tab;
+      p.classList.toggle('active', on);
+      p.setAttribute('aria-hidden', on ? 'false' : 'true');
     });
-    document.querySelectorAll('.mbn-item').forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-tab')===tab); });
+    document.querySelectorAll('.tab-link').forEach(function(l){
+      var on = l.getAttribute('data-tab')===tab;
+      l.classList.toggle('active', on);
+      if(on){ l.setAttribute('aria-current','page'); } else { l.removeAttribute('aria-current'); }
+    });
+    document.querySelectorAll('.mbn-item').forEach(function(b){
+      var on = b.getAttribute('data-tab')===tab;
+      b.classList.toggle('active', on);
+      if(on){ b.setAttribute('aria-current','page'); } else { b.removeAttribute('aria-current'); }
+    });
     try { window.scrollTo({top:0, behavior:'smooth'}); } catch(e){ window.scrollTo(0,0); }
-    // re-trigger reveals in active panel
     document.querySelectorAll('.tab-panel.active .reveal').forEach(function(el){ el.classList.add('in-view'); });
     return tab;
   }
+
   function tabFromHash(){
     var h = (location.hash||'').replace('#','');
-    var map = {products:'products', services:'services', comparison:'products', 'how-it-works':'how', 'order-form-section':'order', payment:'order', 'phc-resources':'phc', faq:'faq', 'documentation-areas':'products', home:'home'};
-    return map[h] || 'home';
+    return TAB_BY_HASH[h] || 'home';
   }
+
+  function go(tab){
+    activateTab(tab);
+    var hash = HASH_BY_TAB[tab];
+    if(history && history.replaceState){
+      var url = (hash ? '#' + hash : location.pathname + location.search);
+      history.replaceState(null, '', url);
+    }
+  }
+
   document.addEventListener('click', function(e){
     var t = e.target.closest('[data-tab]');
     if(!t) return;
     var tab = t.getAttribute('data-tab');
     if(!tab) return;
-    // allow buttons and elements intended for tabs
-    if(t.classList.contains('tab-link') || t.classList.contains('dash-btn') || t.hasAttribute('data-switch-tab')){
+    if(t.classList.contains('tab-link') || t.classList.contains('dash-btn') || t.classList.contains('mbn-item') || t.hasAttribute('data-switch-tab')){
       e.preventDefault();
-      activateTab(tab);
-      var hashMap = {home:'', products:'products', services:'services', how:'how-it-works', order:'order-form-section', phc:'phc-resources', faq:'faq'};
-      if(history && history.replaceState){ history.replaceState(null,'', hashMap[tab] ? ('#'+hashMap[tab]) : location.pathname); }
+      go(tab);
     }
   });
+
   window.addEventListener('hashchange', function(){ activateTab(tabFromHash()); });
-  document.addEventListener('DOMContentLoaded', function(){ activateTab(tabFromHash()); });
+  function init(){ activateTab(tabFromHash()); }
+  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', init); } else { init(); }
 })();
