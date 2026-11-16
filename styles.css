@@ -1794,3 +1794,95 @@ img, svg { max-width: 100%; }
   .nav-cta .wa-label { display: none; }
   .nav-cta .btn-wa-nav { padding: 9px 12px; }
 }
+
+
+/* ===== Welcome dashboard intro ===== */
+.welcome-lead { font-size: 1.06rem; line-height: 1.6; color: #475569; margin: 0 0 8px; max-width: 58ch; }
+.welcome-note { font-size: .93rem; color: #64748b; margin: 0 0 4px; }
+.welcome-steps { margin: 30px 0 36px; }
+.welcome-steps-head { text-align: center; margin-bottom: 20px; }
+.welcome-steps-head h2 { font-size: 1.5rem; margin: 0 0 6px; color: #0f172a; }
+.welcome-steps-head p { margin: 0; color: #64748b; font-size: .96rem; }
+.ws-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.ws-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #e2edf8;
+  border-radius: 18px;
+  padding: 22px 20px;
+  box-shadow: 0 10px 26px rgba(7, 134, 227, .07);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.ws-card:hover { transform: translateY(-3px); border-color: #9fd5ff; box-shadow: 0 16px 34px rgba(7, 134, 227, .14); }
+.ws-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0786E3, #35a9ff);
+  color: #fff;
+  font-weight: 800;
+  font-size: .85rem;
+  margin-bottom: 12px;
+}
+.ws-card h3 { font-size: 1.05rem; margin: 0 0 6px; color: #0f172a; }
+.ws-card p { color: #64748b; font-size: .92rem; line-height: 1.55; margin: 0 0 14px; }
+.ws-card code { background: #f1f5f9; color: #0f172a; padding: 1px 5px; border-radius: 5px; font-size: .85em; }
+.ws-link {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: #0569b8;
+  font-weight: 800;
+  font-size: .9rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.ws-link i { transition: transform .2s ease; }
+.ws-link:hover i, .ws-link:focus-visible i { transform: translateX(3px); }
+.ws-link:focus-visible { outline: 2px solid #0786E3; outline-offset: 3px; border-radius: 6px; }
+
+@media (max-width: 980px) {
+  .ws-grid { grid-template-columns: 1fr 1fr; }
+  .ws-card:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 768px) {
+  .ws-grid { grid-template-columns: 1fr; }
+  .ws-card:last-child { grid-column: auto; }
+  .welcome-steps { margin: 24px 0 28px; }
+  .welcome-steps-head { text-align: left; }
+  .welcome-steps-head h2 { font-size: 1.25rem; }
+  .welcome-lead { font-size: .99rem; }
+  .ws-card { padding: 18px 16px; }
+  .ws-link { min-height: 44px; }
+}
+/* ===== Footer internal links (SEO) ===== */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  padding: 18px 16px;
+  margin-bottom: 6px;
+  border-top: 1px solid #1e293b;
+  font-size: .86rem;
+}
+.footer-links .fl-title { color: #94a3b8; font-weight: 700; }
+.footer-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color .2s ease, border-color .2s ease;
+}
+.footer-links a:hover, .footer-links a:focus-visible {
+  color: #ffffff;
+  border-bottom-color: #0786E3;
+}
+@media (max-width: 768px) {
+  .footer-links { gap: 6px 12px; font-size: .82rem; padding: 14px 14px; }
+  .footer-links .fl-title { width: 100%; }
+}
