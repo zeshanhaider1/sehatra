@@ -272,3 +272,45 @@ function closeModal() {
   }
   if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', initReveal); } else { initReveal(); }
 })();
+
+
+
+// Dashboard tab navigation (no infinite scroll)
+(function(){
+  function activateTab(tab){
+    if(!tab) return;
+    var panels = document.querySelectorAll('.tab-panel');
+    var links = document.querySelectorAll('[data-tab]');
+    var found = false;
+    panels.forEach(function(p){ if(p.getAttribute('data-panel')===tab) found = true; });
+    if(!found) tab = 'home';
+    panels.forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-panel')===tab); });
+    links.forEach(function(l){
+      if(l.classList.contains('tab-link')) l.classList.toggle('active', l.getAttribute('data-tab')===tab);
+    });
+    try { window.scrollTo({top:0, behavior:'smooth'}); } catch(e){ window.scrollTo(0,0); }
+    // re-trigger reveals in active panel
+    document.querySelectorAll('.tab-panel.active .reveal').forEach(function(el){ el.classList.add('in-view'); });
+    return tab;
+  }
+  function tabFromHash(){
+    var h = (location.hash||'').replace('#','');
+    var map = {products:'products', services:'services', comparison:'products', 'how-it-works':'how', 'order-form-section':'order', payment:'order', 'phc-resources':'phc', faq:'faq', 'documentation-areas':'products', home:'home'};
+    return map[h] || 'home';
+  }
+  document.addEventListener('click', function(e){
+    var t = e.target.closest('[data-tab]');
+    if(!t) return;
+    var tab = t.getAttribute('data-tab');
+    if(!tab) return;
+    // allow buttons and elements intended for tabs
+    if(t.classList.contains('tab-link') || t.classList.contains('dash-btn') || t.hasAttribute('data-switch-tab')){
+      e.preventDefault();
+      activateTab(tab);
+      var hashMap = {home:'', products:'products', services:'services', how:'how-it-works', order:'order-form-section', phc:'phc-resources', faq:'faq'};
+      if(history && history.replaceState){ history.replaceState(null,'', hashMap[tab] ? ('#'+hashMap[tab]) : location.pathname); }
+    }
+  });
+  window.addEventListener('hashchange', function(){ activateTab(tabFromHash()); });
+  document.addEventListener('DOMContentLoaded', function(){ activateTab(tabFromHash()); });
+})();

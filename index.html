@@ -294,6 +294,7 @@
         }
         .order-id-line strong { color: #0f766e; letter-spacing: .02em; }
     </style>
+    <meta name="theme-color" content="#0786E3">
 </head>
 <body>
 
@@ -317,14 +318,15 @@
                     <span class="brand-sub">Healthcare Consultancy &amp; Compliance</span>
                 </div>
             </a>
-            <div class="nav-links">
-                <a href="#products">Digital Toolkits</a>
-                    <a href="#services">Services</a>
-                <a href="#comparison">Why Sehatra</a>
-                <a href="#how-it-works">How It Works</a>
-                <a href="#payment">Payment Methods</a>
-                <a href="#faq">FAQs</a>
-            </div>
+            <div class="nav-links tab-nav">
+                    <button class="tab-link active" data-tab="home">🏠 Home</button>
+                    <button class="tab-link" data-tab="products">📦 Products</button>
+                    <button class="tab-link" data-tab="services">🛠️ Services</button>
+                    <button class="tab-link" data-tab="how">🚀 How It Works</button>
+                    <button class="tab-link" data-tab="order">🧾 Order & Payment</button>
+                    <button class="tab-link" data-tab="phc">🏛️ PHC Resources</button>
+                    <button class="tab-link" data-tab="faq">💬 FAQs</button>
+                </div>
             <div class="nav-cta">
                 <a href="https://wa.me/923042917388?text=Hello%20Sehatra%2C%20I%20would%20like%20to%20order%20the%20PHC%20compliance%20toolkit." target="_blank" class="btn btn-wa-nav">
                     <i class="fa-brands fa-whatsapp"></i> WhatsApp Order
@@ -333,83 +335,66 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <header class="hero">
-        <div class="container hero-grid">
-            <div class="hero-text reveal">
-                <div class="hero-pill">
-                    <i class="fa-solid fa-shield-check"></i> Aligned with PHC, SHCC &amp; IHRA MSDS Standards <span class="hero-spark">✨</span>
-                </div>
-                <h1 class="hero-title">
-                    Tired of Healthcare Commission Audit Stress? <br>
-                    <span class="text-gradient">Healthcare Consultancy &amp; Editable Documentation Toolkits for Clinics &amp; Hospitals.</span>
-                </h1>
-                <p class="hero-desc">
-                    Sehatra provides <strong>healthcare consultancy in Pakistan</strong> for clinics, hospitals and labs — including online document review, on-visit audit guidance, and editable <strong>Microsoft Word (.docx) and Excel (.xlsx)</strong> SOPs, statutory committee logs, and staff HR dossiers. Practical documentation support to help you organize records and prepare confidently for PHC/MSDS-related requirements.
-                </p>
-                <div class="hero-badges">
-                    <div class="badge-item"><i class="fa-solid fa-circle-check"></i> Aligned with PHC, SHCC &amp; IHRA MSDS standards</div>
-                    <div class="badge-item"><i class="fa-solid fa-file-word"></i> Fully Editable Files</div>
-                    <div class="badge-item"><i class="fa-solid fa-clock"></i> Delivery target: 60 min after payment confirmation</div>
-                    <div class="badge-item"><i class="fa-solid fa-money-bill-wave"></i> Raast / Easypaisa / Bank Transfer</div>
-                </div>
-                <div class="hero-buttons">
-                    <a href="#products" class="btn btn-primary btn-lg">
-                        <i class="fa-solid fa-folder-open"></i> Explore Toolkits &amp; Pricing
-                    </a>
-                    <a href="#order-form-section" class="btn btn-secondary btn-lg">
-                        <i class="fa-solid fa-pen-to-square"></i> Fill Quick Order Form
-                    </a>
-                </div>
-                <p class="hero-subtext">
-                    <i class="fa-solid fa-lock"></i> Permanent Google Drive VIP access link + compressed WhatsApp ZIP archive dispatched within 60 minutes of payment confirmation.
-                </p>
-            </div>
-            <div class="hero-card reveal">
-                <div class="audit-card">
-                    <div class="audit-card-header">
-                        <span class="pulse-dot"></span>
-                        <h4>Official MSDS Inspection Readiness Matrix</h4>
-                        <span class="status-pass">Audit-Ready</span>
-                    </div>
-                    <div class="audit-items">
-                        <div class="audit-row">
-                            <span><i class="fa-solid fa-file-signature text-teal"></i> Cat-III Clinic Operations SOPs (18 Standards)</span>
-                            <span class="tag-ready">Verified</span>
-                        </div>
-                        <div class="audit-row">
-                            <span><i class="fa-solid fa-clipboard-check text-teal"></i> Biomedical Waste &amp; Color-Coded Segregation Logs</span>
-                            <span class="tag-ready">Verified</span>
-                        </div>
-                        <div class="audit-row">
-                            <span><i class="fa-solid fa-temperature-arrow-down text-teal"></i> Autoclave Sterilization &amp; Validation Records</span>
-                            <span class="tag-ready">Verified</span>
-                        </div>
-                        <div class="audit-row">
-                            <span><i class="fa-solid fa-users-gear text-teal"></i> 16-Cadre Hospital Staff HR Dossiers &amp; Signed JDs</span>
-                            <span class="tag-ready">Verified</span>
-                        </div>
-                        <div class="audit-row">
-                            <span><i class="fa-solid fa-chart-pie text-teal"></i> CQI Audits &amp; Statutory Committee Minutes</span>
-                            <span class="tag-ready">Verified</span>
-                        </div>
-                    </div>
-                    <div class="audit-footer">
-                        <div class="audit-savings">
-                            <span class="save-label">Traditional Physical Consultant Fee:</span>
-                            <span class="strike">PKR 150,000+</span>
-                        </div>
-                        <div class="audit-our-price">
-                            <span class="our-label">Sehatra Instant Digital Toolkit:</span>
-                            <span class="deal-price">From PKR 2,999</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <!-- TRUST STRIP -->
+
+<main class="app-main">
+
+    <!-- WELCOME DASHBOARD -->
+    <section id="home-panel" class="tab-panel active" data-panel="home">
+      <div class="welcome-dashboard">
+        <div class="container welcome-grid">
+          <div class="welcome-copy reveal in-view">
+            <span class="welcome-kicker">🏠 Sehatra Dashboard</span>
+            <h1>Welcome to Sehatra <span class="brand-accent">Healthcare Consultancy</span></h1>
+            <p>Yahan se aap products, consultancy services, order/payment, PHC resources aur FAQs tak ek click mein ja sakte hain. Neeche buttons use karein — page lamba scroll nahi karega, har cheez tabs mein milegi.</p>
+            <div class="dashboard-actions">
+              <button class="dash-btn primary" data-tab="products"><i class="fa-solid fa-box-open"></i> 📦 Digital Toolkits</button>
+              <button class="dash-btn" data-tab="services"><i class="fa-solid fa-user-doctor"></i> 🛠️ Consultancy Services</button>
+              <button class="dash-btn" data-tab="order"><i class="fa-solid fa-file-invoice"></i> 🧾 Order & Payment</button>
+              <button class="dash-btn" data-tab="phc"><i class="fa-solid fa-building-columns"></i> 🏛️ PHC Resources</button>
+              <button class="dash-btn" data-tab="how"><i class="fa-solid fa-list-check"></i> 🚀 How It Works</button>
+              <button class="dash-btn" data-tab="faq"><i class="fa-solid fa-circle-question"></i> 💬 FAQs</button>
+            </div>
+            <div class="welcome-highlights">
+              <span>✅ Healthcare Consultancy</span>
+              <span>📄 PHC/MSDS Documentation Support</span>
+              <span>⚡ Fast WhatsApp Response</span>
+            </div>
+          </div>
+          <div class="welcome-mascot reveal in-view">
+            <div class="mascot-card">
+              <svg class="sehatra-mascot" viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sehatra healthcare guide character">
+  <defs>
+    <linearGradient id="mBlue" x1="0" x2="1"><stop offset="0" stop-color="#0786E3"/><stop offset="1" stop-color="#33A7FF"/></linearGradient>
+    <linearGradient id="mRed" x1="0" x2="1"><stop offset="0" stop-color="#E7251C"/><stop offset="1" stop-color="#FF5A52"/></linearGradient>
+  </defs>
+  <ellipse cx="110" cy="238" rx="58" ry="10" fill="#0f172a" opacity="0.12"/>
+  <circle cx="110" cy="72" r="42" fill="#fff4e8" stroke="#0f172a" stroke-width="3"/>
+  <path d="M72 58c6-28 30-40 58-34 18 4 28 16 30 34-10-10-22-14-38-10-18 4-34 8-50 10z" fill="url(#mBlue)" stroke="#0f172a" stroke-width="3"/>
+  <circle cx="95" cy="72" r="4.5" fill="#0f172a"/><circle cx="125" cy="72" r="4.5" fill="#0f172a"/>
+  <path d="M96 90c8 8 20 8 28 0" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+  <rect x="63" y="112" rx="26" ry="26" width="94" height="92" fill="url(#mBlue)" stroke="#0f172a" stroke-width="3"/>
+  <rect x="95" y="112" width="30" height="92" rx="10" fill="#ffffff" opacity="0.22"/>
+  <circle cx="110" cy="150" r="16" fill="#fff"/>
+  <rect x="106" y="140" width="8" height="20" rx="2" fill="url(#mRed)"/>
+  <rect x="100" y="146" width="20" height="8" rx="2" fill="url(#mRed)"/>
+  <rect x="38" y="128" rx="12" width="30" height="58" fill="url(#mBlue)" stroke="#0f172a" stroke-width="3" transform="rotate(-18 53 157)"/>
+  <rect x="152" y="128" rx="12" width="30" height="58" fill="url(#mBlue)" stroke="#0f172a" stroke-width="3" transform="rotate(18 167 157)"/>
+  <rect x="72" y="196" rx="10" width="28" height="40" fill="#123b63" stroke="#0f172a" stroke-width="3"/>
+  <rect x="120" y="196" rx="10" width="28" height="40" fill="#123b63" stroke="#0f172a" stroke-width="3"/>
+  <g transform="translate(150,28)">
+    <rect x="0" y="18" rx="10" width="54" height="38" fill="#fff" stroke="#0f172a" stroke-width="3"/>
+    <path d="M8 56l10-10h28" fill="none" stroke="#0f172a" stroke-width="3"/>
+    <rect x="10" y="26" width="8" height="22" rx="2" fill="url(#mRed)"/>
+    <rect x="4" y="32" width="20" height="8" rx="2" fill="url(#mRed)"/>
+  </g>
+</svg>
+              <div class="mascot-bubble">Assalam-o-Alaikum! Main Sehatra Guide hoon — aapko sahi section tak le jata hoon. 👋</div>
+            </div>
+          </div>
+        </div>
+      </div>
+          <!-- TRUST STRIP -->
     <section class="trust-strip">
         <div class="container trust-grid">
             <div class="trust-box reveal">
@@ -443,7 +428,9 @@
         </div>
     </section>
 
-    <!-- PRODUCTS SECTION -->
+
+    </section>
+<section id="products-panel" class="tab-panel" data-panel="products">    <!-- PRODUCTS SECTION -->
     <section id="products" class="products-section">
         <div class="container">
             <div class="section-header text-center reveal">
@@ -623,7 +610,88 @@
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
+
+    <!-- DOCUMENTATION AREAS (SEO TOPIC LINKS) -->
+    <section id="documentation-areas" class="products-section" style="background:#f7fbfa;">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-tag">🗂️ Documentation Areas</span>
+                <h2 class="section-title">Find Templates by Facility Need</h2>
+                <p class="section-desc">Browse editable documentation for PHC-aligned clinic files, hospital HR records, quality committee evidence, and infection control registers.</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card reveal">
+                    <h3 class="product-name"><a href="phc-category-iii-clinic-kit.html">PHC Category-III Clinic Documentation</a></h3>
+                    <p class="product-summary">SOP manual, 47-point MSDS self-audit checklist, evidence tracker, and patient charter for GP and family physician clinics in Punjab.</p>
+                </div>
+                <div class="product-card reveal">
+                    <h3 class="product-name"><a href="hospital-hr-dossiers.html">Hospital HR Files &amp; Job Descriptions</a></h3>
+                    <p class="product-summary">Staff master files, 16-cadre job descriptions, orientation manual, appraisal pack, and credentialing tracker.</p>
+                </div>
+                <div class="product-card reveal">
+                    <h3 class="product-name"><a href="hospital-cqi-committees.html">CQI &amp; Statutory Committee Records</a></h3>
+                    <p class="product-summary">Notification-to-minutes CQI sequence, KPI trackers, OTMC and HICC packs, and medical record review formats.</p>
+                </div>
+                <div class="product-card reveal">
+                    <h3 class="product-name"><a href="infection-control-biomedical-waste-bundle.html">Infection Control &amp; Waste Registers</a></h3>
+                    <p class="product-summary">Biomedical waste logbook, autoclave sterilization log, CSSD breakdown register, needle-stick log, and sanitation sheet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- COMPARISON SECTION -->
+    <section id="comparison" class="comparison-section">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-tag">⚖️ Value Comparison</span>
+                <h2 class="section-title">Traditional Physical Consultant vs. Sehatra Digital Toolkit</h2>
+                <p class="section-desc">Compare traditional high-fee advisory visits with our instant, verified digital compliance suite:</p>
+            </div>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Features &amp; Standards</th>
+                            <th>Traditional Physical Consultant</th>
+                            <th class="highlight-col">Sehatra Digital Toolkit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Total Financial Investment</strong></td>
+                            <td class="text-red font-bold">Often higher / varies by scope (verify locally)</td>
+                            <td class="highlight-col text-green font-bold">Rs. 2,999 â€“ Rs. 11,999 (One-Time)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Turnaround &amp; Setup Time</strong></td>
+                            <td>3 to 6 Weeks (Multiple physical visits)</td>
+                            <td class="highlight-col font-bold">Delivery target: within 60 minutes after payment confirmation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Document Ownership &amp; Customization</strong></td>
+                            <td>Locked PDFs or consultant-retained rights</td>
+                            <td class="highlight-col font-bold">100% Unlocked, Editable Word &amp; Excel Files</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PHC MSDS Compliance Accuracy</strong></td>
+                            <td>Subjective and varies by individual visit</td>
+                            <td class="highlight-col font-bold">Audit-Proven, real-world verified PHC formats</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Payment Friction</strong></td>
+                            <td>Substantial cash advances / cheque demands</td>
+                            <td class="highlight-col font-bold">Instant Raast ID, Easypaisa, JazzCash &amp; Bank</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+</section>
+<section id="services-panel" class="tab-panel" data-panel="services">    <!-- SERVICES SECTION -->
     <section id="services" class="services-section">
         <div class="container">
             <div class="section-header text-center reveal">
@@ -690,56 +758,8 @@
         </div>
     </section>
 
-    <!-- COMPARISON SECTION -->
-    <section id="comparison" class="comparison-section">
-        <div class="container">
-            <div class="section-header text-center reveal">
-                <span class="section-tag">⚖️ Value Comparison</span>
-                <h2 class="section-title">Traditional Physical Consultant vs. Sehatra Digital Toolkit</h2>
-                <p class="section-desc">Compare traditional high-fee advisory visits with our instant, verified digital compliance suite:</p>
-            </div>
-            <div class="comparison-table-wrapper">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Features &amp; Standards</th>
-                            <th>Traditional Physical Consultant</th>
-                            <th class="highlight-col">Sehatra Digital Toolkit</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Total Financial Investment</strong></td>
-                            <td class="text-red font-bold">Often higher / varies by scope (verify locally)</td>
-                            <td class="highlight-col text-green font-bold">Rs. 2,999 â€“ Rs. 11,999 (One-Time)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Turnaround &amp; Setup Time</strong></td>
-                            <td>3 to 6 Weeks (Multiple physical visits)</td>
-                            <td class="highlight-col font-bold">Delivery target: within 60 minutes after payment confirmation</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Document Ownership &amp; Customization</strong></td>
-                            <td>Locked PDFs or consultant-retained rights</td>
-                            <td class="highlight-col font-bold">100% Unlocked, Editable Word &amp; Excel Files</td>
-                        </tr>
-                        <tr>
-                            <td><strong>PHC MSDS Compliance Accuracy</strong></td>
-                            <td>Subjective and varies by individual visit</td>
-                            <td class="highlight-col font-bold">Audit-Proven, real-world verified PHC formats</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Payment Friction</strong></td>
-                            <td>Substantial cash advances / cheque demands</td>
-                            <td class="highlight-col font-bold">Instant Raast ID, Easypaisa, JazzCash &amp; Bank</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
+</section>
+<section id="how-panel" class="tab-panel" data-panel="how">    <!-- HOW IT WORKS -->
     <section id="how-it-works" class="steps-section">
         <div class="container">
             <div class="section-header text-center reveal">
@@ -770,7 +790,8 @@
         </div>
     </section>
 
-    <!-- ORDER FORM & PAYMENT SECTION -->
+</section>
+<section id="order-panel" class="tab-panel" data-panel="order">    <!-- ORDER FORM & PAYMENT SECTION -->
     <section id="order-form-section" class="order-section">
         <div class="container">
             <div class="order-grid">
@@ -943,36 +964,8 @@
     </section>
 
 
-    <!-- DOCUMENTATION AREAS (SEO TOPIC LINKS) -->
-    <section id="documentation-areas" class="products-section" style="background:#f7fbfa;">
-        <div class="container">
-            <div class="section-header text-center reveal">
-                <span class="section-tag">🗂️ Documentation Areas</span>
-                <h2 class="section-title">Find Templates by Facility Need</h2>
-                <p class="section-desc">Browse editable documentation for PHC-aligned clinic files, hospital HR records, quality committee evidence, and infection control registers.</p>
-            </div>
-            <div class="products-grid">
-                <div class="product-card reveal">
-                    <h3 class="product-name"><a href="phc-category-iii-clinic-kit.html">PHC Category-III Clinic Documentation</a></h3>
-                    <p class="product-summary">SOP manual, 47-point MSDS self-audit checklist, evidence tracker, and patient charter for GP and family physician clinics in Punjab.</p>
-                </div>
-                <div class="product-card reveal">
-                    <h3 class="product-name"><a href="hospital-hr-dossiers.html">Hospital HR Files &amp; Job Descriptions</a></h3>
-                    <p class="product-summary">Staff master files, 16-cadre job descriptions, orientation manual, appraisal pack, and credentialing tracker.</p>
-                </div>
-                <div class="product-card reveal">
-                    <h3 class="product-name"><a href="hospital-cqi-committees.html">CQI &amp; Statutory Committee Records</a></h3>
-                    <p class="product-summary">Notification-to-minutes CQI sequence, KPI trackers, OTMC and HICC packs, and medical record review formats.</p>
-                </div>
-                <div class="product-card reveal">
-                    <h3 class="product-name"><a href="infection-control-biomedical-waste-bundle.html">Infection Control &amp; Waste Registers</a></h3>
-                    <p class="product-summary">Biomedical waste logbook, autoclave sterilization log, CSSD breakdown register, needle-stick log, and sanitation sheet.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PHC OFFICIAL RESOURCES -->
+</section>
+<section id="phc-panel" class="tab-panel" data-panel="phc">    <!-- PHC OFFICIAL RESOURCES -->
     <section id="phc-resources" class="phc-resources-section">
         <div class="container">
             <div class="section-header text-center reveal">
@@ -1034,7 +1027,8 @@
         </div>
     </section>
 
-    <!-- FAQ SECTION -->
+</section>
+<section id="faq-panel" class="tab-panel" data-panel="faq">    <!-- FAQ SECTION -->
     <section id="faq" class="faq-section">
         <div class="container">
             <div class="section-header text-center reveal">
@@ -1100,6 +1094,10 @@
         </div>
     </section>
 
+</section>
+
+</main>
+
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container footer-content">
@@ -1127,6 +1125,7 @@
         </div>
     </footer>
 
+
     <!-- FLOATING WHATSAPP BUTTON -->
     <a href="https://wa.me/923042917388?text=Hello%20Sehatra%2C%20I%20would%20like%20to%20inquire%20about%20the%20PHC%20compliance%20toolkit." target="_blank" class="float-wa-btn" title="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
@@ -1152,8 +1151,7 @@
         </div>
     </div>
 
+
     <script src="script.js"></script>
 </body>
 </html>
-
-
