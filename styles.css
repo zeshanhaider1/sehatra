@@ -2182,3 +2182,20 @@ img, svg { max-width: 100%; }
 @media (max-width: 768px) {
   .footer-social a { min-height: 40px; }
 }
+
+/* Keep the order form and navigation usable on narrow phones. */
+@media (max-width: 768px) {
+  /* the icon nav from the desktop rule must stay hidden: the bottom bar carries the tabs */
+  .nav-links.tab-nav { display: none; }
+  .order-grid { padding: 0; min-width: 0; }
+  .form-wrapper, .payment-wrapper, .form-group { min-width: 0; }
+  .mobile-bottom-nav { overflow-x: auto; justify-content: safe center; }
+  .mbn-item { flex: 1 0 48px; min-height: 48px; }
+  .modal-card { max-height: calc(100dvh - 32px); overflow-y: auto; }
+}
+
+.analytics-choice { position:fixed; z-index:1300; left:12px; bottom:12px; max-width:420px; padding:14px; background:#fff; border:1px solid #cbd5e1; border-radius:12px; box-shadow:0 4px 22px #0002; }
+.analytics-choice[hidden] { display:none; }
+.analytics-choice p { margin:0 0 10px; font-size:.85rem; line-height:1.4; }
+.analytics-choice button { min-height:44px; padding:8px 12px; margin-right:6px; cursor:pointer; }
+@media(max-width:768px) { .analytics-choice { left:8px; right:8px; bottom:calc(82px + env(safe-area-inset-bottom)); max-width:none; } }

@@ -1455,14 +1455,14 @@
     <div id="successModal" class="modal-overlay">
         <div class="modal-card">
             <div class="modal-icon"><i class="fa-solid fa-circle-check text-green"></i></div>
-            <h3>Order Initiated Successfully!</h3>
-            <p>Your order details have been received. Please follow these final steps:</p>
+            <h3>Confirm your order on WhatsApp</h3>
+            <p id="orderSaveStatus" role="status" aria-live="polite">Saving your details. Please send the WhatsApp message to confirm your order.</p>
             <div class="modal-steps">
                 <div class="m-step">1. Complete payment transfer via your banking app or Easypaisa.</div>
                 <div class="m-step">2. Send your payment screenshot via WhatsApp using the button below.</div>
             </div>
             <p class="order-id-line">Order ID: <strong id="orderIdValue">â€”</strong></p>
-            <a id="modalWaBtn" href="#" target="_blank" class="btn btn-wa-modal">
+            <a id="modalWaBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-wa-modal">
                 <i class="fa-brands fa-whatsapp"></i> Send Screenshot via WhatsApp
             </a>
             <button onclick="closeModal()" class="btn-close-modal">Close</button>
@@ -1479,6 +1479,11 @@
       <button class="mbn-item" data-tab="order"><i class="fa-solid fa-receipt"></i><span>Order</span></button>
       <button class="mbn-item" data-tab="phc"><i class="fa-solid fa-building-columns"></i><span>PHC</span></button>
     </nav>
+    <aside id="analyticsChoice" class="analytics-choice" aria-label="Analytics choice">
+      <p>May we count anonymous page and button activity to improve this site? No names or form details are sent. Network providers may receive your IP address.</p>
+      <button id="analyticsAllow" type="button">Allow analytics</button>
+      <button id="analyticsDecline" type="button">No thanks</button>
+    </aside>
     <script src="script.js"></script>
 </body>
 </html>

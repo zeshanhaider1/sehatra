@@ -8,8 +8,7 @@ const OFFICIAL_WHATSAPP_NUMBER = "923042917388";
 const SUPABASE_URL = "https://iheerbgatusywlqoejeg.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImloZWVyYmdhdHVzeXdscW9lamVnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM1Mjk0NjcsImV4cCI6MjEwOTEwNTQ2N30.hGz1ffyZyD00W8MfvaZYK4NBXmBRSi-07LP1olxMBeg";
 
-const ORDERS_ENDPOINT = SUPABASE_URL + "/rest/v1/orders";
-const QUEUE_KEY = "sehatra_pending_orders";
+const ORDERS_ENDPOINT = SUPABASE_URL + "/functions/v1/lead-capture";
 
 // 1. Product -> price lookup (PKR)
 function priceForProduct(productText) {
@@ -95,57 +94,15 @@ async function postOrder(record) {
     return true;
 }
 
-// 7. Local queue so a failed save is retried on the next page view
-function readQueue() {
-    try {
-        return JSON.parse(localStorage.getItem(QUEUE_KEY) || "[]");
-    } catch (err) {
-        return [];
-    }
-}
-
-function writeQueue(items) {
-    try {
-        localStorage.setItem(QUEUE_KEY, JSON.stringify(items.slice(-25)));
-    } catch (err) {
-        /* storage unavailable */
-    }
-}
-
-function queueOrder(record) {
-    const items = readQueue();
-    items.push(record);
-    writeQueue(items);
-}
-
-function queueSize() {
-    return readQueue().length;
-}
-
+// Failed submissions are not persisted in browser storage. Existing legacy queued
+// records are left untouched for a separate, privacy-aware recovery decision.
 async function saveOrder(record) {
     try {
         await postOrder(record);
         return true;
     } catch (err) {
-        console.warn("Order save failed, queued locally:", err.message);
-        queueOrder(record);
         return false;
     }
-}
-
-// 8. Retry anything left over from an earlier visit
-async function flushQueue() {
-    const items = readQueue();
-    if (!items.length) return;
-    const remaining = [];
-    for (const record of items) {
-        try {
-            await postOrder(record);
-        } catch (err) {
-            remaining.push(record);
-        }
-    }
-    writeQueue(remaining);
 }
 
 // 9. Page ready
@@ -167,7 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const successModal = document.getElementById("successModal");
     const modalWaBtn = document.getElementById("modalWaBtn");
 
-    flushQueue();
 
     if (!orderForm) return;
 
@@ -193,8 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
             payment_method: document.querySelector('input[name="paymentMethod"]:checked')?.value || "Raast / Bank",
             notes: read("notes") || null,
             price_pkr: priceForProduct(product),
-            source: window.location.href,
-            user_agent: navigator.userAgent
+            source: window.location.origin + window.location.pathname
         };
 
         if (!order.name || !order.clinic || !order.city || !order.whatsapp || !order.product) {
@@ -208,6 +163,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (modalWaBtn) {
             modalWaBtn.href = waUrl;
         }
+        const status = document.getElementById("orderSaveStatus");
+        if (status) status.textContent = "Saving your details. Please send the WhatsApp message to confirm your order.";
 
         // WhatsApp must open inside this click gesture, or mobile browsers block it.
         let waWindow = null;
@@ -217,14 +174,23 @@ document.addEventListener("DOMContentLoaded", () => {
             waWindow = null;
         }
 
-        // Save the lead in the background (never blocks the WhatsApp tab)
-        const record = Object.assign({}, order);
-        delete record._orderId;
+        // Save the lead in the background (never blocks the WhatsApp tab).
+        // Only the fields shown on the form are sent; the server decides price, source
+        // and every other column, so a visitor cannot set them.
+        const record = {
+            name: order.name, clinic: order.clinic, city: order.city,
+            whatsapp: order.whatsapp, product: order.product,
+            payment_method: order.payment_method, notes: order.notes
+        };
         saveOrder(record).then(saved => {
             const orderIdEl = document.getElementById("orderIdValue");
-            if (orderIdEl) {
-                orderIdEl.textContent = order._orderId + (saved ? "" : " (offline)");
-            }
+            if (orderIdEl) orderIdEl.textContent = order._orderId;
+            const status = document.getElementById("orderSaveStatus");
+            if (status) status.textContent = saved
+                ? "Your details were saved. Send the WhatsApp message to confirm your order."
+                : "We could not save your details. Please send the WhatsApp message below to place your order.";
+            // Clear the typed details only once they are safely stored.
+            if (saved && typeof orderForm.reset === "function") orderForm.reset();
         });
 
         if (successModal) {
@@ -234,11 +200,8 @@ document.addEventListener("DOMContentLoaded", () => {
             successModal.setAttribute("data-wa-opened", waWindow ? "1" : "0");
         }
 
-        orderForm.reset();
     });
 
-    // Keep the queue honest if the network returns while the page is open
-    window.addEventListener("online", flushQueue);
 });
 
 // 10. Modal controls
@@ -336,4 +299,33 @@ function closeModal() {
   window.addEventListener('hashchange', function(){ activateTab(tabFromHash()); });
   function init(){ activateTab(tabFromHash()); }
   if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', init); } else { init(); }
+})();
+
+// Aggregate analytics is disabled until the visitor opts in for this page session.
+// Nothing is stored and nothing is sent before the click; a "no" lasts for the page only.
+(function () {
+  let enabled = false;
+  const endpoint = SUPABASE_URL + '/functions/v1/analytics';
+  // Global Privacy Control is a formal opt-out signal; honour it without asking.
+  const optedOut = navigator.globalPrivacyControl === true;
+  const send = (event, label) => {
+    if (!enabled || optedOut) return;
+    fetch(endpoint, {method:'POST',keepalive:true,headers:{'Content-Type':'application/json',apikey:SUPABASE_ANON_KEY},body:JSON.stringify({event,label})}).catch(() => {});
+  };
+  const active = () => document.querySelector('.tab-panel.active')?.getAttribute('data-panel') || 'home';
+  document.addEventListener('DOMContentLoaded', () => {
+    const choice = document.getElementById('analyticsChoice');
+    if (!choice) return;
+    if (optedOut) { choice.hidden = true; return; }
+    document.getElementById('analyticsAllow')?.addEventListener('click', () => { enabled = true; choice.hidden = true; send('page',active()); });
+    document.getElementById('analyticsDecline')?.addEventListener('click', () => { enabled = false; choice.hidden = true; });
+    document.addEventListener('click', e => {
+      if (!enabled) return;
+      const tab = e.target.closest('[data-tab]');
+      if (tab && ['home','products','software','services','how','order','phc','faq'].includes(tab.dataset.tab)) send('page',tab.dataset.tab);
+      const link = e.target.closest('a[href]');
+      if (link && link.hostname === 'wa.me') send('click','whatsapp');
+      if (e.target.closest('#orderForm button[type="submit"]')) send('click','order');
+    });
+  });
 })();
