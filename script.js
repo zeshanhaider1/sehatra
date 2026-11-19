@@ -82,8 +82,7 @@ async function postOrder(record) {
         headers: {
             "apikey": SUPABASE_ANON_KEY,
             "Authorization": "Bearer " + SUPABASE_ANON_KEY,
-            "Content-Type": "application/json",
-            "Prefer": "return=minimal"
+            "Content-Type": "application/json"
         },
         body: JSON.stringify(record)
     });
