@@ -16,7 +16,7 @@ const LIMITS = { name: 100, clinic: 150, city: 80, whatsapp: 25, notes: 1000 };
 
 const CORS = {
   'Access-Control-Allow-Origin': ALLOWED_ORIGIN,
-  'Access-Control-Allow-Headers': 'authorization, apikey, content-type, x-client-info',
+  'Access-Control-Allow-Headers': 'authorization, apikey, content-type, prefer, x-client-info',
   'Access-Control-Allow-Methods': 'POST, OPTIONS',
   'Vary': 'Origin',
   'Cache-Control': 'no-store'
